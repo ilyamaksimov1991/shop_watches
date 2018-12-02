@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "framework\\": "vendor/framework/core",
+      "app\\": "app"
+    }
+  },
+  "require": {
+    "vlucas/valitron": "^1.4",
+    "swiftmailer/swiftmailer": "^5.4"
+  }
+}

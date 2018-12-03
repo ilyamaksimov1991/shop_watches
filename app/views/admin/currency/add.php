@@ -4,8 +4,8 @@
         Новая валюта
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/currency">Список валют</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/currency">Список валют</a></li>
         <li class="active">Новая валюта</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/currency/add" method="post" data-toggle="validator">
+                <form action="<?=ADMIN_URL;?>/currency/add" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="title">Наименование валюты</label>

@@ -4,8 +4,8 @@
         Новый пользователь
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= ADMIN ?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?= ADMIN ?>/user"> Список пользователей</a></li>
+        <li><a href="<?= ADMIN_URL ?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?= ADMIN_URL ?>/user"> Список пользователей</a></li>
         <li class="active">Новый пользователь</li>
     </ol>
 </section>

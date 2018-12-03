@@ -9,7 +9,7 @@
         Группы фильтров
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Группы фильтров</li>
     </ol>
 </section>
@@ -21,7 +21,7 @@
             <div class="box">
                 <div class="box-body">
                     <div class="table-responsive">
-                        <a href="<?=ADMIN;?>/filter/group-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Добавить группу</a>
+                        <a href="<?=ADMIN_URL;?>/filter/group-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Добавить группу</a>
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
@@ -34,8 +34,8 @@
                             <tr>
                                 <td><?=$item;?></td>
                                 <td>
-                                    <a href="<?=ADMIN;?>/filter/group-edit?id=<?=$k;?>"><i class="fa fa-fw fa-pencil"></i></a>
-                                    <a class="delete text-danger" href="<?=ADMIN;?>/filter/group-delete?id=<?=$k;?>"><i class="fa fa-fw fa-close text-danger"></i></a>
+                                    <a href="<?=ADMIN_URL;?>/filter/group-edit?id=<?=$k;?>"><i class="fa fa-fw fa-pencil"></i></a>
+                                    <a class="delete text-danger" href="<?=ADMIN_URL;?>/filter/group-delete?id=<?=$k;?>"><i class="fa fa-fw fa-close text-danger"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

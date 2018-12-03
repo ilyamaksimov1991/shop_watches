@@ -17,7 +17,7 @@ class AppController extends AbstractController
     {
         parent::__construct($route);
         if (!User::isAdmin() && $route['action'] != 'login-admin') {
-            redirect(ADMIN . '/user/login-admin');
+            redirect(ADMIN_URL . '/user/login-admin');
         }
         new AppModel();
 

@@ -4,7 +4,7 @@
         Список категорий
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Список категорий</li>
     </ol>
 </section>
@@ -16,7 +16,7 @@
             <div class="box">
                 <div class="box-body">
                     <?php new \app\widgets\menu\Menu([
-                        'tpl' => WIDGETS . '/menu/menu_tpl/category_admin.php',
+                        'tpl' => WIDGETS_DIR . '/menu/menu_tpl/category_admin.php',
                         'container' => 'div',
                         'cache' => 0,
                         'cacheKey' => 'admin_cat',

@@ -9,8 +9,8 @@
         Фильтры
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/filter/attribute-group"> Группы фильтров</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/filter/attribute-group"> Группы фильтров</a></li>
         <li class="active">Фильтры</li>
     </ol>
 </section>
@@ -22,7 +22,7 @@
             <div class="box">
                 <div class="box-body">
                     <div class="table-responsive">
-                        <a href="<?=ADMIN;?>/filter/attribute-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Добавить атрибут</a>
+                        <a href="<?=ADMIN_URL;?>/filter/attribute-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Добавить атрибут</a>
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
@@ -37,8 +37,8 @@
                                     <td><?=$item['value'];?></td>
                                     <td><?=$item['title'];?></td>
                                     <td>
-                                        <a href="<?=ADMIN;?>/filter/attribute-edit?id=<?=$id;?>"><i class="fa fa-fw fa-pencil"></i></a>
-                                        <a class="delete text-danger" href="<?=ADMIN;?>/filter/attribute-delete?id=<?=$id;?>"><i class="fa fa-fw fa-close text-danger"></i></a>
+                                        <a href="<?=ADMIN_URL;?>/filter/attribute-edit?id=<?=$id;?>"><i class="fa fa-fw fa-pencil"></i></a>
+                                        <a class="delete text-danger" href="<?=ADMIN_URL;?>/filter/attribute-delete?id=<?=$id;?>"><i class="fa fa-fw fa-close text-danger"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

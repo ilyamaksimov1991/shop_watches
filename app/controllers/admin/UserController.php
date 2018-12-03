@@ -23,7 +23,7 @@ class UserController extends AppController {
             }
 
             if(User::isAdmin()){
-                redirect(ADMIN);
+                redirect(ADMIN_URL);
             }else{
                 redirect();
             }

@@ -9,7 +9,7 @@
         Список валют
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Список валют</li>
     </ol>
 </section>
@@ -39,8 +39,8 @@
                                     <td><?=$currency;?></td>
                                     <td><?=$value['value'];?></td>
                                     <td>
-                                        <a href="<?=ADMIN;?>/currency/edit?id=<?=$value['id'];?>"><i class="fa fa-fw fa-pencil"></i></a>
-                                        <a class="delete" href="<?=ADMIN;?>/currency/delete?id=<?=$value['id'];?>"><i class="fa fa-fw fa-close text-danger"></i></a>
+                                        <a href="<?=ADMIN_URL;?>/currency/edit?id=<?=$value['id'];?>"><i class="fa fa-fw fa-pencil"></i></a>
+                                        <a class="delete" href="<?=ADMIN_URL;?>/currency/delete?id=<?=$value['id'];?>"><i class="fa fa-fw fa-close text-danger"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -4,8 +4,8 @@
         Новая группа фильтров
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/filter/attribute-group">Группы фильтров</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/filter/attribute-group">Группы фильтров</a></li>
         <li class="active">Новая группа</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/filter/group-add" method="post" data-toggle="validator">
+                <form action="<?=ADMIN_URL;?>/filter/group-add" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="title">Наименование группы</label>

@@ -11,7 +11,7 @@
         Список пользователей
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Список пользователей</li>
     </ol>
 </section>
@@ -41,7 +41,7 @@
                                     <td><?=$user->email;?></td>
                                     <td><?=$user->name;?></td>
                                     <td><?=$user->role;?></td>
-                                    <td><a href="<?=ADMIN;?>/user/edit?id=<?=$user->id;?>"><i class="fa fa-fw fa-eye"></i></a></td>
+                                    <td><a href="<?=ADMIN_URL;?>/user/edit?id=<?=$user->id;?>"><i class="fa fa-fw fa-eye"></i></a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

@@ -12,7 +12,7 @@
         Панель управления
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
     </ol>
 </section>
 
@@ -30,7 +30,7 @@
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="<?=ADMIN;?>/order" class="small-box-footer">Все заказы <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?=ADMIN_URL;?>/order" class="small-box-footer">Все заказы <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -44,7 +44,7 @@
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="<?=ADMIN;?>/product" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?=ADMIN_URL;?>/product" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -58,7 +58,7 @@
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="<?=ADMIN;?>/user" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?=ADMIN_URL;?>/user" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -72,7 +72,7 @@
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="<?=ADMIN;?>/category" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?=ADMIN_URL;?>/category" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->

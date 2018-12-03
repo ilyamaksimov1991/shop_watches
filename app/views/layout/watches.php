@@ -63,7 +63,7 @@
 <!--top-header-->
 <!--start-logo-->
 <div class="logo">
-    <a href="<?= PATH; ?>"><h1>Luxury Watches</h1></a>
+    <a href="<?= SITE_URL; ?>"><h1>Luxury Watches</h1></a>
 </div>
 <!--start-logo-->
 <!--bottom-header-->
@@ -74,7 +74,7 @@
                 <div class="menu-container">
                     <div class="menu">
                         <?php new \app\widgets\menu\Menu([
-                            'tpl' => WIDGETS . '/menu/menu_tpl/menu_widget.php',
+                            'tpl' => WIDGETS_DIR . '/menu/menu_tpl/menu_widget.php',
                         ]); ?>
                     </div>
                 </div>
@@ -193,7 +193,7 @@
 
 <?php $curr = \framework\App::$app->getProperty('currency'); ?>
 <script>
-    var path = '<?=PATH;?>',
+    var path = '<?=SITE_URL;?>',
         course = <?=$curr['value'];?>,
         symboleLeft = '<?=$curr['symbol_left'];?>',
         symboleRight = '<?=$curr['symbol_right'];?>';

@@ -10,8 +10,8 @@
         Редактирование пользователя
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/user"> Список пользователей</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/user"> Список пользователей</a></li>
         <li class="active">Редактирование пользователя</li>
     </ol>
 </section>
@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/user/edit" method="post" data-toggle="validator">
+                <form action="<?=ADMIN_URL;?>/user/edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="login">Логин</label>
@@ -87,7 +87,7 @@
                                         <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                         <td><?=$order['date'];?></td>
                                         <td><?=$order['update_at'];?></td>
-                                        <td><a href="<?=ADMIN;?>/order/view?id=<?=$order['id'];?>"><i class="fa fa-fw fa-eye"></i></a></td>
+                                        <td><a href="<?=ADMIN_URL;?>/order/view?id=<?=$order['id'];?>"><i class="fa fa-fw fa-eye"></i></a></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>

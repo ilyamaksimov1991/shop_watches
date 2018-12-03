@@ -4,8 +4,8 @@
         Список категорий
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/category">Список категорий</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/category">Список категорий</a></li>
         <li class="active">Новая категория</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                    <form action="<?=ADMIN;?>/category/add" method="post" data-toggle="validator">
+                    <form action="<?=ADMIN_URL;?>/category/add" method="post" data-toggle="validator">
                         <div class="box-body">
                             <div class="form-group has-feedback">
                                 <label for="title">Наименование категории</label>
@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <label for="parent_id">Родительская категория</label>
                                 <?php new \app\widgets\menu\Menu([
-                                    'tpl' => WIDGETS . '/menu/menu_tpl/select.php',
+                                    'tpl' => WIDGETS_DIR . '/menu/menu_tpl/select.php',
                                     'container' => 'select',
                                     'cache' => 0,
                                     'cacheKey' => 'admin_select',

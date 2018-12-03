@@ -4,7 +4,7 @@
         Очистка кэша
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Очистка кэша</li>
     </ol>
 </section>
@@ -28,12 +28,12 @@
                                 <tr>
                                     <td>Кэш категорий</td>
                                     <td>Меню категорий на сайте. Кэшируется на 1 час</td>
-                                    <td><a class="delete" href="<?=ADMIN;?>/cache/delete?key=category"><i class="fa fa-fw fa-close text-danger"></i></a></td>
+                                    <td><a class="delete" href="<?=ADMIN_URL;?>/cache/delete?key=category"><i class="fa fa-fw fa-close text-danger"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>Кэш фильтров</td>
                                     <td>Кэш фильтров и групп фильтров. Кэшируется на 1 час</td>
-                                    <td><a class="delete" href="<?=ADMIN;?>/cache/delete?key=filter"><i class="fa fa-fw fa-close text-danger"></i></a></td>
+                                    <td><a class="delete" href="<?=ADMIN_URL;?>/cache/delete?key=filter"><i class="fa fa-fw fa-close text-danger"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>

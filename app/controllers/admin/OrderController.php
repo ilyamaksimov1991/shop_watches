@@ -79,7 +79,7 @@ class OrderController extends AppController
         (new OrderModel())->deleteOrder($orderId);
 
         $_SESSION['success'] = 'Заказ удален';
-        redirect(ADMIN . '/order');
+        redirect(ADMIN_URL . '/order');
     }
 
 }

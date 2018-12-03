@@ -55,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
     <div class="logo">
         <img src="/errors/images/404.png" alt=""  />
-        <p><a href="<?=PATH;?>">Go back to Home</a></p>
+        <p><a href="<?=SITE_URL;?>">Go back to Home</a></p>
     </div>
 </div>
 <div class="footer">

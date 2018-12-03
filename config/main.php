@@ -1,17 +1,14 @@
 <?php
 
-define('DEBUG', 1);
-define('ROOT', dirname(__DIR__));
-define('WWW', ROOT.'/web');
-define('APP', ROOT.'/app');
-define('WIDGETS', ROOT.'/app/widgets');
-define('CORE', ROOT.'/vendor/framework/core');
-define('LIBS', ROOT.'/vendor/framework/core/libs');
-define('CASHE', ROOT.'/tmp/cache');
-define('CONFIG', ROOT.'/config');
+define('ROOT_DIR', dirname(__DIR__));
+define('WWW', ROOT_DIR.'/web');
+define('APP', ROOT_DIR.'/app');
+define('WIDGETS_DIR', ROOT_DIR.'/app/widgets');
+define('CACHE_DIR', ROOT_DIR.'/tmp/cache');
+define('CONFIG_DIR', ROOT_DIR.'/config');
 define('LAYOUT', 'watches');
-define('PATH', 'http://'.$_SERVER['HTTP_HOST']);
-define('ADMIN', PATH . '/admin');
+define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST']);
+define('ADMIN_URL', SITE_URL . '/admin');
 
-require_once ROOT . '/vendor/autoload.php';
+require_once ROOT_DIR . '/vendor/autoload.php';
 

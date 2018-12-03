@@ -12,8 +12,8 @@
         Редактирование товара <?=$product->title;?>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/product">Список товаров</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/product">Список товаров</a></li>
         <li class="active">Редактирование</li>
     </ol>
 </section>
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/product/edit" method="post" data-toggle="validator">
+                <form action="<?=ADMIN_URL;?>/product/edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="title">Наименование товара</label>
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label for="category_id">Родительская категория</label>
                             <?php new \app\widgets\menu\Menu([
-                                'tpl' => WIDGETS . '/menu/menu_tpl/select.php',
+                                'tpl' => WIDGETS_DIR . '/menu/menu_tpl/select.php',
                                 'container' => 'select',
                                 'cache' => 0,
                                 'cacheKey' => 'admin_select',
@@ -96,7 +96,7 @@
                             </select>
                         </div>
 
-                        <?php new \app\widgets\filter\Filter($filter, WIDGETS . '/filter/admin_filter_tpl.php'); ?>
+                        <?php new \app\widgets\filter\Filter($filter, WIDGETS_DIR . '/filter/admin_filter_tpl.php'); ?>
                         <div class="form-group">
                             <div class="col-md-4">
                                 <div class="box box-danger box-solid file-upload">

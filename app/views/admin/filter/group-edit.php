@@ -9,8 +9,8 @@
         Редактирование группы фильтров <?=h($group->title);?>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/filter/attribute-group">Группы фильтров</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/filter/attribute-group">Группы фильтров</a></li>
         <li class="active">Редактирование</li>
     </ol>
 </section>
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/filter/group-edit" method="post" data-toggle="validator">
+                <form action="<?=ADMIN_URL;?>/filter/group-edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="title">Наименование группы</label>

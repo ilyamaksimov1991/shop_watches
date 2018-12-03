@@ -4,7 +4,7 @@
         Список товаров
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Список товаров</li>
     </ol>
 </section>
@@ -35,7 +35,7 @@
                                     <td><?=$product['title'];?></td>
                                     <td><?=$product['price'];?></td>
                                     <td><?=$product['status'] ? 'On' : 'Off';?></td>
-                                    <td><a href="<?=ADMIN;?>/product/edit?id=<?=$product['id'];?>"><i class="fa fa-fw fa-eye"></i></a> <a class="delete" href="<?=ADMIN;?>/product/delete?id=<?=$product['id'];?>"><i class="fa fa-fw fa-close text-danger"></i></a></td>
+                                    <td><a href="<?=ADMIN_URL;?>/product/edit?id=<?=$product['id'];?>"><i class="fa fa-fw fa-eye"></i></a> <a class="delete" href="<?=ADMIN_URL;?>/product/delete?id=<?=$product['id'];?>"><i class="fa fa-fw fa-close text-danger"></i></a></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

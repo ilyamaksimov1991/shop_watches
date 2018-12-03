@@ -9,8 +9,8 @@
         Новый фильтр
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/filter/attribute">Список фильтров</a></li>
+        <li><a href="<?=ADMIN_URL;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN_URL;?>/filter/attribute">Список фильтров</a></li>
         <li class="active">Новый фильтр</li>
     </ol>
 </section>
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?=ADMIN;?>/filter/attribute-add" method="post" data-toggle="validator" id="add">
+                <form action="<?=ADMIN_URL;?>/filter/attribute-add" method="post" data-toggle="validator" id="add">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="value">Наименование</label>

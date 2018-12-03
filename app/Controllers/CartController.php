@@ -20,6 +20,7 @@ class CartController extends AppController
         $qty = !empty($_GET['qty']) ? (int)$_GET['qty'] : null;
         $mod_id = !empty($_GET['mod']) ? (int)$_GET['mod'] : null;
         $mod = null;
+        //from request
 
         if (!$id) {
             throw new \Exception('Нет такого продукта', 500);
@@ -28,7 +29,7 @@ class CartController extends AppController
         $product = (new ProductModel())->getOneProduct(['id' => $id]);
 
         if (!$product) {
-            return false;
+            return false; //return ????
         }
         if ($mod_id) {
             $mod = (new ModificationProductModel())->getProduct(['id' => $mod_id, 'product_id' => $id]);

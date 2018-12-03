@@ -1,4 +1,5 @@
 <?php
+
 namespace app\Controllers\Admin;
 
 use app\Models\admin\Currency;
@@ -10,7 +11,6 @@ use app\Models\CurrencyModel;
  */
 class CurrencyController extends AppController
 {
-
     public function indexAction()
     {
         $currencies = (new CurrencyModel())->getAllCurrencies();
@@ -81,5 +81,4 @@ class CurrencyController extends AppController
         }
         $this->setMeta('Новая валюта');
     }
-
 }

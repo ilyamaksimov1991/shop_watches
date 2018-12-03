@@ -72,24 +72,20 @@ class Category extends AppModel
 
     /**
      * @param int $id
-     * @return string
      */
-    public function checkProductsInCategoryAndCheckOfChildCategoriesAndErrorDisplays($id)
+    public function checkCategoriesBeforeDelete($id)
     {
         $category = new CategoryModel();
 
         $children = $category->checkProductsInCategory($id);
-        $errors = '';
         if ($children) {
-            $errors .= '<li>Удаление невозможно, в категории есть вложенные категории</li>';
+            throw new NestedCategoryExistsException('Удаление невозможно, в категории есть вложенные категории');
         }
 
         $products = $category->checkOfChildCategories($id);
         if ($products) {
-            $errors .= '<li>Удаление невозможно, в категории есть товары</li>';
+            throw new ProductsExistsException('Удаление невозможно, в категории есть товары');
         }
-
-        return $errors;
     }
 
 }

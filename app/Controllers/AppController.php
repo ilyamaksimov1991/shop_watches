@@ -1,4 +1,5 @@
 <?php
+
 namespace app\Controllers;
 
 use app\Models\AppModel;
@@ -17,13 +18,8 @@ class AppController extends AbstractController
     public function __construct($route)
     {
         parent::__construct($route);
-        new AppModel();
-        
         App::$app->setProperty('currencies', (new CurrencyModel())->getAllCurrencies());
         App::$app->setProperty('currency', Currency::getCurrency(App::$app->getProperty('currencies')));
         App::$app->setProperty('cats', Cache::cacheCategory());
     }
-
-
-
 }

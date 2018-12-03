@@ -1,4 +1,5 @@
 <?php
+
 namespace app\Controllers\Admin;
 
 use framework\Cache;
@@ -9,7 +10,6 @@ use framework\Cache;
  */
 class CacheController extends AppController
 {
-
     public function indexAction()
     {
         $this->setMeta('Очистка кэша');
@@ -17,12 +17,11 @@ class CacheController extends AppController
 
     public function deleteAction()
     {
-        $key = isset($_GET['key']) ? $_GET['key'] : null;
+        $key = $_GET['key'] ?? null; //Better to create request object
 
         (new Cache())->deleteCache($key);
 
         $_SESSION['success'] = 'Выбранный кэш удален';
         redirect();
     }
-
 }

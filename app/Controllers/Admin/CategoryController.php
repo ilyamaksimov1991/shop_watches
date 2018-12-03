@@ -1,4 +1,5 @@
 <?php
+
 namespace app\Controllers\Admin;
 
 use app\Models\AppModel;
@@ -26,8 +27,10 @@ class CategoryController extends AppController
             throw new \Exception('Категории не существует', 404);
         }
 
-        if ($errors = (new Category())->checkProductsInCategoryAndCheckOfChildCategoriesAndErrorDisplays($id)) {
-            $_SESSION['error'] = "<ul>$errors</ul>";
+        try {
+            (new Category())->checkCategoriesBeforeDelete($id);//creating object and call func to many for if //to long method name
+        } catch (SomeBaseException $e) {
+            $_SESSION['error'] = $e->getMessage();
             redirect();
         }
 
@@ -39,31 +42,28 @@ class CategoryController extends AppController
 
     public function addAction()
     {
-        if (!empty($_POST)) {
-
-            $category = new Category();
-            $category->load($_POST);
-            if (!$category->validate($_POST)) {
-                $category->getErrors();
-                redirect();
-            }
-
-            if ($id = $category->save('category')) {
-
-                $alias = AppModel::createAlias('category', 'alias', $_POST['title'], $id);
-                (new CategoryModel())->saveAliasOfTheCategory($alias, $id);
-
-                $_SESSION['success'] = 'Категория добавлена';
-            }
-
+        $category = new Category();
+        $category->load($_POST);
+        if (!$category->validate($_POST)) {
+            $category->getErrors();// if empty post will be error here
             redirect();
         }
+
+        if ($id = $category->save('category')) {
+            $alias = AppModel::createAlias('category', 'alias', $_POST['title'], $id);
+            (new CategoryModel())->saveAliasOfTheCategory($alias, $id);
+
+            $_SESSION['success'] = 'Категория добавлена';
+        }
+
+        redirect();
         $this->setMeta('Новая категория');
     }
 
-
     public function editAction()
     {
+
+        //get and post not in one action
         if (!empty($_POST)) {
             $id = $_POST['id'];
             if (!$id) {
@@ -92,11 +92,10 @@ class CategoryController extends AppController
             throw new \Exception('Категории не существует', 404);
         }
 
-        $category =(new CategoryModel())->getCategory($id);
+        $category = (new CategoryModel())->getCategory($id);
         App::$app->setProperty('parent_id', $category->parent_id);
 
         $this->setMeta("Редактирование категории {$category->title}");
         $this->render(compact('category'));
     }
-
 }

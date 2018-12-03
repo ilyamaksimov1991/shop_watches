@@ -1,8 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "framework\\": "vendor/framework/core",
-      "app\\": "app"
+      "Framework\\": "vendor/framework/core",
+      "App\\": "app"
     }
   },
   "require": {
